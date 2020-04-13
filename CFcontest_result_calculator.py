@@ -11,7 +11,7 @@ with open(sys.argv[1], mode='r') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     flag = 0
     for row in csv_reader:
-        lowerCaseHandle = row[1].lower()
+        lowerCaseHandle = row[1].lower().strip()
         if(flag==0):
             stringOfHandles += lowerCaseHandle
             flag=1
